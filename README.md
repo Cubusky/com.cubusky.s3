@@ -1,7 +1,7 @@
 # About Cubusky S3
 Cubusky S3 is a package for integrating S3 Saving & Loading inside your project.
 
-### ONLY USE THIS PACKAGE IF YOU KNOW WHAT YOU'RE DOING ⚠️
+### ⚠️ ONLY USE THIS PACKAGE IF YOU KNOW WHAT YOU'RE DOING ⚠️
 Cubusky S3 does not encrypt your credentials and provides no security features! This is something you will need to integrate yourself. Be aware that storing access keys inside your public Unity project can be used by hackers to, in the worst case, mine bitcoins on your S3 server, accruing massive debt for you to pay off.
 
 ## Installing Cubusky S3
