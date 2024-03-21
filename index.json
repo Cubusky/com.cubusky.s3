@@ -1,0 +1,77 @@
+{
+  "api/Cubusky.S3.BasicCredentials.html": {
+    "href": "api/Cubusky.S3.BasicCredentials.html",
+    "title": "Class BasicCredentials | Cubusky S3 | 0.9.0-pre",
+    "keywords": "Class BasicCredentials Namespace Cubusky.S3 public class BasicCredentials : ScriptableObject, ICredentials, ISerializationCallbackReceiver Inheritance object BasicCredentials Implements ICredentials ISerializationCallbackReceiver Properties accessKey public string? accessKey { get; set; } Property Value string credentials public AWSCredentials? credentials { get; } Property Value AWSCredentials? secretKey public string? secretKey { get; set; } Property Value string"
+  },
+  "api/Cubusky.S3.ICredentials.html": {
+    "href": "api/Cubusky.S3.ICredentials.html",
+    "title": "Interface ICredentials | Cubusky S3 | 0.9.0-pre",
+    "keywords": "Interface ICredentials Namespace Cubusky.S3 public interface ICredentials Properties credentials AWSCredentials credentials { get; } Property Value AWSCredentials"
+  },
+  "api/Cubusky.S3.IRegionEndpoint.html": {
+    "href": "api/Cubusky.S3.IRegionEndpoint.html",
+    "title": "Interface IRegionEndpoint | Cubusky S3 | 0.9.0-pre",
+    "keywords": "Interface IRegionEndpoint Namespace Cubusky.S3 public interface IRegionEndpoint Properties region RegionEndpoint region { get; } Property Value RegionEndpoint"
+  },
+  "api/Cubusky.S3.IS3EnumerableLoader.html": {
+    "href": "api/Cubusky.S3.IS3EnumerableLoader.html",
+    "title": "Interface IS3EnumerableLoader | Cubusky S3 | 0.9.0-pre",
+    "keywords": "Interface IS3EnumerableLoader Namespace Cubusky.S3 public interface IS3EnumerableLoader : IEnumerableLoader, IEnumerableLoader<MemoryStream>, IEnumerableLoader<GetObjectResponse>, IEnumerableLoader<ListObjectsV2Response> Properties bucketName string bucketName { get; } Property Value string client IAmazonS3 client { get; } Property Value IAmazonS3 maxCalls int maxCalls { get; } Property Value int maxKeys int maxKeys { get; } Property Value int prefix string prefix { get; } Property Value string versionId string? versionId { get; } Property Value string"
+  },
+  "api/Cubusky.S3.IS3Loader.html": {
+    "href": "api/Cubusky.S3.IS3Loader.html",
+    "title": "Interface IS3Loader | Cubusky S3 | 0.9.0-pre",
+    "keywords": "Interface IS3Loader Namespace Cubusky.S3 public interface IS3Loader : ILoader, ILoader<MemoryStream>, ILoader<GetObjectResponse> Properties bucketName string bucketName { get; } Property Value string client IAmazonS3 client { get; } Property Value IAmazonS3 key string key { get; } Property Value string versionId string? versionId { get; } Property Value string"
+  },
+  "api/Cubusky.S3.IS3Saver.html": {
+    "href": "api/Cubusky.S3.IS3Saver.html",
+    "title": "Interface IS3Saver | Cubusky S3 | 0.9.0-pre",
+    "keywords": "Interface IS3Saver Namespace Cubusky.S3 public interface IS3Saver : ISaver, ISaver<MemoryStream> Properties bucketName string bucketName { get; } Property Value string client IAmazonS3 client { get; } Property Value IAmazonS3 key string key { get; } Property Value string tags List<Amazon.S3.Model.Tag>? tags { get; } Property Value List<Amazon.S3.Model.Tag> Methods Save(byte[]) PutObjectResponse Save(byte[] data) Parameters data byte[] Returns PutObjectResponse Save(MemoryStream) PutObjectResponse Save(MemoryStream data) Parameters data MemoryStream Returns PutObjectResponse Save(string) PutObjectResponse Save(string data) Parameters data string Returns PutObjectResponse SaveAsync(byte[], CancellationToken) Task<PutObjectResponse> SaveAsync(byte[] data, CancellationToken cancellationToken = default) Parameters data byte[] cancellationToken CancellationToken Returns Task<PutObjectResponse> SaveAsync(MemoryStream, CancellationToken) Task<PutObjectResponse> SaveAsync(MemoryStream data, CancellationToken cancellationToken = default) Parameters data MemoryStream cancellationToken CancellationToken Returns Task<PutObjectResponse> SaveAsync(string, CancellationToken) Task<PutObjectResponse> SaveAsync(string data, CancellationToken cancellationToken = default) Parameters data string cancellationToken CancellationToken Returns Task<PutObjectResponse>"
+  },
+  "api/Cubusky.S3.Region.html": {
+    "href": "api/Cubusky.S3.Region.html",
+    "title": "Class Region | Cubusky S3 | 0.9.0-pre",
+    "keywords": "Class Region Namespace Cubusky.S3 public class Region : ScriptableObject, ISerializationCallbackReceiver, IRegionEndpoint Inheritance object Region Implements ISerializationCallbackReceiver IRegionEndpoint Properties region public RegionEndpoint? region { get; set; } Property Value RegionEndpoint? Operators implicit operator RegionEndpoint?(Region) public static implicit operator RegionEndpoint?(Region region) Parameters region Region Returns RegionEndpoint?"
+  },
+  "api/Cubusky.S3.S3SaverLoader.html": {
+    "href": "api/Cubusky.S3.S3SaverLoader.html",
+    "title": "Class S3SaverLoader | Cubusky S3 | 0.9.0-pre",
+    "keywords": "Class S3SaverLoader Namespace Cubusky.S3 [Serializable] public class S3SaverLoader : IS3Saver, ISaver, ISaver<MemoryStream>, IS3Loader, ILoader, ILoader<MemoryStream>, ILoader<GetObjectResponse>, IS3EnumerableLoader, IEnumerableLoader, IEnumerableLoader<MemoryStream>, IEnumerableLoader<GetObjectResponse>, IEnumerableLoader<ListObjectsV2Response>, ISerializationCallbackReceiver, ISaverLoader, ISaverLoader<MemoryStream> Inheritance object S3SaverLoader Implements IS3Saver ISaver ISaver<MemoryStream> IS3Loader ILoader ILoader<MemoryStream> ILoader<GetObjectResponse> IS3EnumerableLoader IEnumerableLoader IEnumerableLoader<MemoryStream> IEnumerableLoader<GetObjectResponse> IEnumerableLoader<ListObjectsV2Response> ISerializationCallbackReceiver ISaverLoader ISaverLoader<MemoryStream> Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties bucketName public string bucketName { get; set; } Property Value string getCredentials public ICredentials? getCredentials { get; set; } Property Value ICredentials key public string key { get; set; } Property Value string maxCalls public int maxCalls { get; set; } Property Value int maxKeys public int maxKeys { get; set; } Property Value int prefix public string prefix { get; set; } Property Value string putCredentials public ICredentials? putCredentials { get; set; } Property Value ICredentials region public IRegionEndpoint? region { get; set; } Property Value IRegionEndpoint tags public List<Tag>? tags { get; set; } Property Value List<Tag> versionId public string versionId { get; set; } Property Value string"
+  },
+  "api/Cubusky.S3.Tag.html": {
+    "href": "api/Cubusky.S3.Tag.html",
+    "title": "Class Tag | Cubusky S3 | 0.9.0-pre",
+    "keywords": "Class Tag Namespace Cubusky.S3 [Serializable] public record Tag : IEquatable<Tag> Inheritance object Tag Implements IEquatable<Tag> Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Fields Key public string? Key Field Value string Value public string? Value Field Value string Operators implicit operator Tag(Tag) public static implicit operator Tag(Amazon.S3.Model.Tag tag) Parameters tag Tag Returns Tag implicit operator Tag(Tag) public static implicit operator Amazon.S3.Model.Tag(Tag tag) Parameters tag Tag Returns Tag"
+  },
+  "api/Cubusky.S3.html": {
+    "href": "api/Cubusky.S3.html",
+    "title": "Namespace Cubusky.S3 | Cubusky S3 | 0.9.0-pre",
+    "keywords": "Namespace Cubusky.S3 Classes BasicCredentials Region S3SaverLoader Tag Interfaces ICredentials IRegionEndpoint IS3EnumerableLoader IS3Loader IS3Saver"
+  },
+  "api/index.html": {
+    "href": "api/index.html",
+    "title": "| Cubusky S3 | 0.9.0-pre",
+    "keywords": "This is the documentation for the Scripting APIs of this package."
+  },
+  "changelog/CHANGELOG.html": {
+    "href": "changelog/CHANGELOG.html",
+    "title": "Changelog | Cubusky S3 | 0.9.0-pre",
+    "keywords": "Changelog All notable changes to this package will be documented in this file. The format is based on Keep a Changelog and this project adheres to Semantic Versioning. [0.1.0-exp] - 2023-09-05 This is the first release of Package Template. Package Template is a GitHub template repository for generating repositories for Unity packages hosted on GitHub."
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "| Cubusky S3 | 0.9.0-pre",
+    "keywords": "This page redirects to the manual."
+  },
+  "license/LICENSE.html": {
+    "href": "license/LICENSE.html",
+    "title": "| Cubusky S3 | 0.9.0-pre",
+    "keywords": "MIT License Copyright (c) 2023 Cubusky Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+  },
+  "manual/index.html": {
+    "href": "manual/index.html",
+    "title": "About Cubusky S3 | Cubusky S3 | 0.9.0-pre",
+    "keywords": "About Cubusky S3 Cubusky S3 is a package for integrating S3 Saving & Loading inside your project. ⚠️ ONLY USE THIS PACKAGE IF YOU KNOW WHAT YOU'RE DOING ⚠️ Cubusky S3 does not encrypt your credentials and provides no security features! This is something you will need to integrate yourself. Be aware that storing access keys inside your public Unity project can be used by hackers to, in the worst case, mine bitcoins on your S3 server, accruing massive debt for you to pay off. Installing Cubusky S3 To install this package, follow the instructions on the Package Manager documentation after adding the following lines in your manifest.json { \"dependencies\": { \"com.cubusky.core\": \"https://github.com/Cubusky/com.cubusky.core.git#1.2\" } } Requirements This version of Templates Package is compatible with the following versions of the Unity Editor: 2022.3 and later (recommended) Known Limitations Cubusky S3 0.9.0-pre includes the following known limitations: No security features have been implemented."
+  }
+}

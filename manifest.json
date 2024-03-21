@@ -1,0 +1,244 @@
+{
+  "sitemap": {
+    "baseUrl": "https://cubusky.github.io/com.cubusky.s3/"
+  },
+  "source_base_path": "/home/runner/work/com.cubusky.s3/com.cubusky.s3/Documentation~",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.S3.BasicCredentials.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.S3.BasicCredentials.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.S3.ICredentials.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.S3.ICredentials.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.S3.IRegionEndpoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.S3.IRegionEndpoint.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.S3.IS3EnumerableLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.S3.IS3EnumerableLoader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.S3.IS3Loader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.S3.IS3Loader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.S3.IS3Saver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.S3.IS3Saver.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.S3.Region.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.S3.Region.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.S3.S3SaverLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.S3.S3SaverLoader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.S3.Tag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.S3.Tag.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Cubusky.S3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Cubusky.S3.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "changelog/CHANGELOG.md",
+      "output": {
+        ".html": {
+          "relative_path": "changelog/CHANGELOG.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "changelog/toc.md",
+      "output": {
+        ".json": {
+          "relative_path": "changelog/toc.json"
+        },
+        ".html": {
+          "relative_path": "changelog/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "license/LICENSE.md",
+      "output": {
+        ".html": {
+          "relative_path": "license/LICENSE.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "license/toc.md",
+      "output": {
+        ".json": {
+          "relative_path": "license/toc.json"
+        },
+        ".html": {
+          "relative_path": "license/toc.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "manual/images/favicon.png",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/favicon.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "manual/images/logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "manual/images/logo.svg"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "toc.json"
+        },
+        ".html": {
+          "relative_path": "toc.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
