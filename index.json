@@ -77,7 +77,7 @@
   "manual/Permissions.html": {
     "href": "manual/Permissions.html",
     "title": "IAM Permissions | Cubusky S3 | 1.0.0",
-    "keywords": "IAM Permissions Saving | Permission | Note | | PutObject | | PutObjectTagging (optional) | If you omit this permission you save tags. | Loading | Permission | Note | | GetObject | | GetObjectTagging (optional) | If you omit this permission you cannot load tags. | ListBucket |"
+    "keywords": "IAM Permissions Saving Permission Note PutObject PutObjectTagging (optional) If you omit this permission you save tags. Loading Permission Note GetObject GetObjectTagging (optional) If you omit this permission you cannot load tags. ListBucket"
   },
   "manual/S3SaverLoader.html": {
     "href": "manual/S3SaverLoader.html",
