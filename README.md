@@ -19,5 +19,5 @@ This version of _Templates Package_ is compatible with the following versions of
 - 2022.3 and later (recommended)
 
 ## Known Limitations
-Cubusky S3 `0.9.0-pre` includes the following known limitations:
+Cubusky S3 `1.0.0` includes the following known limitations:
 - No security features have been implemented.
