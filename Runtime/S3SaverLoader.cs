@@ -182,15 +182,15 @@ namespace Cubusky.S3
     {
         [SerializeField, OfType(typeof(IRegionEndpoint)), Tooltip("The region that the bucket resides in.")] private Object? _region;
         [field: SerializeField, Tooltip("The bucket that will be saved to and loaded from.")] public string bucketName { get; set; } = string.Empty;
-        [field: SerializeField, Path(true), Tooltip("The directory that will be saved to and loaded from.")] public string prefix { get; set; } = string.Empty;
-        [field: SerializeField, Tooltip("The file that will be saved to and loaded from.")] public string key { get; set; } = string.Empty;
 
         [Header("Save")]
         [SerializeField, OfType(typeof(ICredentials))] private Object? _putCredentials;
+        [field: SerializeField, Path, Tooltip("The file to save to - or load from in single load operations.")] public string key { get; set; } = string.Empty;
         [field: SerializeField] public List<Tag>? tags { get; set; }
 
         [Header("Load")]
         [SerializeField, OfType(typeof(ICredentials))] private Object? _getCredentials;
+        [field: SerializeField, Path(true), Tooltip("The directory that will be loaded from in enumerable load operations.")] public string prefix { get; set; } = string.Empty;
         [field: SerializeField, Range(0, 1000), Tooltip("The maximum results that will be loaded in a single batch. Amazon allows collecting a maximum of a 1,000 results at once. It is recommended to always keep this at a 1,000.")] public int maxKeys { get; set; } = 1000;
         [field: SerializeField, Tooltip("The maximum calls that will be made to an S3 server for a single loading operation. -1 means calls will be made until all objects have been loaded. Note that every call made to an S3 server incurs Amazon service costs.")] public int maxCalls { get; set; } = -1;
         [field: SerializeField] public string versionId { get; set; } = string.Empty;
@@ -228,8 +228,5 @@ namespace Cubusky.S3
                 : new AmazonS3Client(getCredentials.credentials, region.region);
 
         IAmazonS3 IS3EnumerableLoader.client => ((IS3Loader)this).client;
-
-        string IS3Saver.key => $"{prefix.Replace('\\', '/')}/{key}";
-        string IS3Loader.key => (this as IS3Saver).key;
     }
 }
