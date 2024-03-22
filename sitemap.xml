@@ -2,109 +2,109 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://cubusky.github.io/com.cubusky.s3/api/Cubusky.S3.BasicCredentials.html</loc>
-    <lastmod>2024-03-22T12:46:28+00:00</lastmod>
+    <lastmod>2024-03-22T01:02:43+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://cubusky.github.io/com.cubusky.s3/api/Cubusky.S3.ICredentials.html</loc>
-    <lastmod>2024-03-22T12:46:28+00:00</lastmod>
+    <lastmod>2024-03-22T01:02:43+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://cubusky.github.io/com.cubusky.s3/api/Cubusky.S3.IRegionEndpoint.html</loc>
-    <lastmod>2024-03-22T12:46:28+00:00</lastmod>
+    <lastmod>2024-03-22T01:02:43+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://cubusky.github.io/com.cubusky.s3/api/Cubusky.S3.IS3EnumerableLoader.html</loc>
-    <lastmod>2024-03-22T12:46:28+00:00</lastmod>
+    <lastmod>2024-03-22T01:02:43+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://cubusky.github.io/com.cubusky.s3/api/Cubusky.S3.IS3Loader.html</loc>
-    <lastmod>2024-03-22T12:46:28+00:00</lastmod>
+    <lastmod>2024-03-22T01:02:43+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://cubusky.github.io/com.cubusky.s3/api/Cubusky.S3.IS3Saver.html</loc>
-    <lastmod>2024-03-22T12:46:28+00:00</lastmod>
+    <lastmod>2024-03-22T01:02:43+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://cubusky.github.io/com.cubusky.s3/api/Cubusky.S3.Region.html</loc>
-    <lastmod>2024-03-22T12:46:28+00:00</lastmod>
+    <lastmod>2024-03-22T01:02:43+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://cubusky.github.io/com.cubusky.s3/api/Cubusky.S3.S3SaverLoader.html</loc>
-    <lastmod>2024-03-22T12:46:28+00:00</lastmod>
+    <lastmod>2024-03-22T01:02:43+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://cubusky.github.io/com.cubusky.s3/api/Cubusky.S3.Tag.html</loc>
-    <lastmod>2024-03-22T12:46:28+00:00</lastmod>
+    <lastmod>2024-03-22T01:02:43+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://cubusky.github.io/com.cubusky.s3/api/Cubusky.S3.html</loc>
-    <lastmod>2024-03-22T12:46:28+00:00</lastmod>
+    <lastmod>2024-03-22T01:02:43+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://cubusky.github.io/com.cubusky.s3/api/index.html</loc>
-    <lastmod>2024-03-22T12:46:28+00:00</lastmod>
+    <lastmod>2024-03-22T01:02:43+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://cubusky.github.io/com.cubusky.s3/changelog/CHANGELOG.html</loc>
-    <lastmod>2024-03-22T12:46:28+00:00</lastmod>
+    <lastmod>2024-03-22T01:02:43+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://cubusky.github.io/com.cubusky.s3/index.html</loc>
-    <lastmod>2024-03-22T12:46:28+00:00</lastmod>
+    <lastmod>2024-03-22T01:02:43+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://cubusky.github.io/com.cubusky.s3/license/LICENSE.html</loc>
-    <lastmod>2024-03-22T12:46:28+00:00</lastmod>
+    <lastmod>2024-03-22T01:02:43+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://cubusky.github.io/com.cubusky.s3/manual/Credentials.html</loc>
-    <lastmod>2024-03-22T12:46:28+00:00</lastmod>
+    <lastmod>2024-03-22T01:02:43+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://cubusky.github.io/com.cubusky.s3/manual/Permissions.html</loc>
-    <lastmod>2024-03-22T12:46:28+00:00</lastmod>
+    <lastmod>2024-03-22T01:02:43+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://cubusky.github.io/com.cubusky.s3/manual/S3SaverLoader.html</loc>
-    <lastmod>2024-03-22T12:46:28+00:00</lastmod>
+    <lastmod>2024-03-22T01:02:43+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://cubusky.github.io/com.cubusky.s3/manual/index.html</loc>
-    <lastmod>2024-03-22T12:46:28+00:00</lastmod>
+    <lastmod>2024-03-22T01:02:43+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
