@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Changelog | Cubusky S3 | 1.0.0 </title>
+      <title>S3 Saver Loader | Cubusky S3 | 1.0.0 </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Changelog | Cubusky S3 | 1.0.0 ">
+      <meta name="title" content="S3 Saver Loader | Cubusky S3 | 1.0.0 ">
       
       
       <link rel="icon" href="../manual/images/favicon.png">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       <meta name="docfx:disablenewtab" content="true">
       
-      <meta name="docfx:docurl" content="https://github.com/Cubusky/com.cubusky.s3/blob/main/Documentation~/changelog/CHANGELOG.md/#L1">
+      <meta name="docfx:docurl" content="https://github.com/Cubusky/com.cubusky.s3/blob/main/Documentation~/manual/S3SaverLoader.md/#L1">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -85,17 +85,59 @@
         </div>
 
         <article data-uid="">
-<h1 id="changelog">Changelog</h1>
+<h1 id="s3-saver-loader">S3 Saver Loader</h1>
 
-<p>All notable changes to this package will be documented in this file.</p>
-<p>The format is based on <a href="http://keepachangelog.com">Keep a Changelog</a>
-and this project adheres to <a href="http://semver.org">Semantic Versioning</a>.</p>
-<h2 id="010-exp---2023-09-05">[0.1.0-exp] - 2023-09-05</h2>
-<h3 id="this-is-the-first-release-of-package-template">This is the first release of <em>Package Template</em>.</h3>
-<p>Package Template is a GitHub template repository for generating repositories for Unity packages hosted on GitHub.</p>
+<p>S3SaverLoader saves and loads data to and from an S3 bucket.</p>
+<p><img src="images/S3SaverLoader.png" alt=""></p>
+<h2 id="general-settings">General Settings</h2>
+<ul>
+<li>The region is where your bucket is located (AWS Region).</li>
+<li>The bucket name is the name of your bucket (Name).</li>
+</ul>
+<p><img src="images/Buckets.png" alt=""></p>
+<ul>
+<li>The key determines the file path to save to.</li>
+<li>The tags list allows you to provide additional tags when saving an object to S3.</li>
+</ul>
+<p><img src="images/ObjectOverview.png" alt="">
+<img src="images/ObjectTags.png" alt=""></p>
+<ul>
+<li>The prefix is used to only load objects from a relative path.</li>
+<li>The max keys is used to limit the amount of objects that can be loaded in a single batch. Typically you want this to be as high as possible, since Amazon will always charge the same price no matter how many objects you collect in a single batch.</li>
+<li>The max calls is used to limit the amount of calls to make to Amazon servers when loading huge amounts of objects (indefinite when set to -1). If your server contains millions of objects, collecting all objects can be costly. When you only need to collect 10,000 objects, you can instead set your max keys to 1,000 and your max calls to 10. Same results for a fraction of the costs.</li>
+</ul>
+<h2 id="extensibility">Extensibility</h2>
+<p>It may be important to determine your save key based on runtime data. The easiest way by far to do so is to extend the <code>S3SaverLoader</code> (or any <code>ISaverLoader</code> for that matter). As long as it's serializable, you may then select it like any other <code>ISaverLoader</code> in the inspector.</p>
+<pre><code class="lang-csharp">[Serializable]
+public class S3UserSaverLoader : S3SaverLoader, IS3Saver, IS3Loader
+{
+    [field: SerializeField] public GameObject owner { get; set; }
+
+    new public string key
+    {
+        get
+        {
+            var userId = GetUserId();
+
+            var baseKey = Path.GetFileNameWithoutExtension(base.key).Replace('\\', '/');
+            var extension = Path.GetExtension(base.key);
+
+            return !owner.scene.IsValid()
+                ? throw new InvalidOperationException($&quot;Can't save or load when an owner has an invalid scene reference&quot;)
+                : $&quot;{baseKey}/{owner.scene.name}/{userId}/{DateTime.UtcNow:u}{extension}&quot;
+                .TrimStart('/');
+        }
+    }
+}
+</code></pre>
+<p><img src="images/S3UserSaverLoader.png" alt=""></p>
+<p>Given a scene named <code>level 1</code> and a user id of <code>1234</code>, these settings will result in the following path in your S3 bucket: <code>Heatmaps/level 1/1234/2024-03-21 20:07:52Z.json</code></p>
 
 </article>
 
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Cubusky/com.cubusky.s3/blob/main/Documentation~/manual/S3SaverLoader.md/#L1" class="edit-link">Edit this page</a>
+        </div>
 
 
       </div>
