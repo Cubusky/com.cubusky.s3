@@ -37,7 +37,7 @@ namespace Cubusky.S3
         IAmazonS3 client { get; }
         string bucketName { get; }
         string key { get; }
-        List<global::Amazon.S3.Model.Tag>? tags { get; }
+        List<Amazon.S3.Model.Tag>? tags { get; }
 
         void ISaver<string>.Save(string data) => Save(data);
         void ISaver<byte[]>.Save(byte[] data) => Save(data);
@@ -60,7 +60,7 @@ namespace Cubusky.S3
                 BucketName = bucketName,
                 Key = key,
                 InputStream = data,
-                TagSet = tags
+                TagSet = tags,
             };
 
             return client.PutObjectAsync(putObjectRequest, cancellationToken);
@@ -84,12 +84,12 @@ namespace Cubusky.S3
         async Task<MemoryStream> ILoader<MemoryStream>.LoadAsync<TData>(CancellationToken cancellationToken)
         {
             var response = await LoadAsync<GetObjectResponse>(cancellationToken);
-            MemoryStream memoryStream = new();
+            using var memoryStream = new MemoryStream();
             await response.ResponseStream.CopyToAsync(memoryStream, cancellationToken);
             return memoryStream;
         }
 
-        Task<GetObjectResponse> ILoader<GetObjectResponse>.LoadAsync<TData>(CancellationToken cancellationToken) => client.GetObjectOneLinerAsync(bucketName, key, versionId, cancellationToken);
+        Task<GetObjectResponse> ILoader<GetObjectResponse>.LoadAsync<TData>(CancellationToken cancellationToken) => client.GetObjectOneLinerAsync(bucketName, key.Replace('\\', '/'), versionId, cancellationToken);
     }
 
     public interface IS3EnumerableLoader : IEnumerableLoader, IEnumerableLoader<MemoryStream>, IEnumerableLoader<GetObjectResponse>, IEnumerableLoader<ListObjectsV2Response>
@@ -133,7 +133,7 @@ namespace Cubusky.S3
         {
             await foreach (var response in LoadAsyncEnumerable<GetObjectResponse>(cancellationToken))
             {
-                MemoryStream memoryStream = new();
+                using var memoryStream = new MemoryStream();
                 await response.ResponseStream.CopyToAsync(memoryStream, cancellationToken);
                 yield return memoryStream;
             }
@@ -213,7 +213,11 @@ namespace Cubusky.S3
             getCredentials = _getCredentials as ICredentials;
         }
 
-        List<global::Amazon.S3.Model.Tag>? IS3Saver.tags => tags?.ConvertAll(tag => (global::Amazon.S3.Model.Tag)tag);
+        string IS3Saver.key => key.Replace('\\', '/');
+        string IS3Loader.key => key.Replace('\\', '/');
+        string IS3EnumerableLoader.prefix => prefix.Replace('\\', '/');
+
+        List<Amazon.S3.Model.Tag>? IS3Saver.tags => tags?.ConvertAll(tag => (Amazon.S3.Model.Tag)tag);
 
         IAmazonS3 IS3Saver.client => region?.region == null
             ? throw new NullReferenceException($"{nameof(region)}.{nameof(region.region)} must not be null.")

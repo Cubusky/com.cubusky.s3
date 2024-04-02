@@ -35,14 +35,14 @@ public class S3UserSaverLoader : S3SaverLoader, IS3Saver, IS3Loader
     {
         get
         {
-            var userId = GetUserId();
+            var userId = GetUserId(); // pseudo code
 
-            var baseKey = Path.GetFileNameWithoutExtension(base.key).Replace('\\', '/');
+            var fullPath = Path.ChangeExtension(base.key, null).Replace('\\', '/');
             var extension = Path.GetExtension(base.key);
 
             return !owner.scene.IsValid()
                 ? throw new InvalidOperationException($"Can't save or load when an owner has an invalid scene reference")
-                : $"{baseKey}/{owner.scene.name}/{userId}/{DateTime.UtcNow:u}{extension}"
+                : $"{fullPath}/{owner.scene.name}/{userId}/{DateTime.UtcNow:u}{extension}"
                 .TrimStart('/');
         }
     }
