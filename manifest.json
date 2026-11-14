@@ -1,4 +1,5 @@
 {
+  "docfx_version": "2.81.0+ba844df625370a6bd7c1ecab0d0ec4d1d9128ac4",
   "sitemap": {
     "baseUrl": "https://cubusky.github.io/com.cubusky.s3/"
   },
@@ -21,7 +22,11 @@
           "relative_path": "api/Cubusky.S3.BasicCredentials.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Cubusky.S3.BasicCredentials",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -31,7 +36,11 @@
           "relative_path": "api/Cubusky.S3.ICredentials.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Cubusky.S3.ICredentials",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -41,7 +50,11 @@
           "relative_path": "api/Cubusky.S3.IRegionEndpoint.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Cubusky.S3.IRegionEndpoint",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -51,7 +64,11 @@
           "relative_path": "api/Cubusky.S3.IS3EnumerableLoader.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Cubusky.S3.IS3EnumerableLoader",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -61,7 +78,11 @@
           "relative_path": "api/Cubusky.S3.IS3Loader.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Cubusky.S3.IS3Loader",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -71,7 +92,11 @@
           "relative_path": "api/Cubusky.S3.IS3Saver.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Cubusky.S3.IS3Saver",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -81,7 +106,11 @@
           "relative_path": "api/Cubusky.S3.Region.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Cubusky.S3.Region",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -91,7 +120,11 @@
           "relative_path": "api/Cubusky.S3.S3SaverLoader.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Cubusky.S3.S3SaverLoader",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -101,7 +134,11 @@
           "relative_path": "api/Cubusky.S3.Tag.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Cubusky.S3.Tag",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -111,7 +148,11 @@
           "relative_path": "api/Cubusky.S3.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Cubusky.S3",
+      "Summary": null
     },
     {
       "type": "Conceptual",
