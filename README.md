@@ -1,3 +1,8 @@
+> [!WARNING]
+> This package is deprecated. Although it might still work, it is unoptimized and no longer supported.
+> 
+> We recommend using [SaveFileBuilder](https://github.com/chickensoft-games/SaveFileBuilder) instead. You can either build a custom S3StreamIO to read from and write to S3 buckets, or hire us at [Cubusky](https://cubusky.com/) to take care of it for you!
+
 # About Cubusky S3
 Cubusky S3 is a package for integrating S3 Saving & Loading inside your project.
 
